@@ -1,16 +1,23 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #0b0b0f;
-  --surface: #13131a;
-  --surface2: #1c1c26;
-  --border: rgba(255,255,255,0.07);
-  --border2: rgba(255,255,255,0.14);
-  --text: #f0ede8;
-  --text-muted: #8a8799;
-  --accent: #c8f55a;
-  --accent2: #5af5c8;
-  --accent-dark: #9ec43a;
+  /* Neutral beige palette with deep navy base */
+  --white-linen: #faf9f6;
+  --navy-blazer: #1b2241;
+  --rich-tan: #c6a47e;
+  --powder-blue: #bcbde6;
+  --ash-grey: #94a3a7;
+
+  --bg: var(--navy-blazer);
+  --surface: #202a4f;
+  --surface2: #28335f;
+  --border: rgba(250,249,246,0.08);
+  --border2: rgba(250,249,246,0.16);
+  --text: var(--white-linen);
+  --text-muted: var(--ash-grey);
+  --accent: var(--rich-tan);
+  --accent2: var(--powder-blue);
+  --accent-dark: #a27b5a;
   --nav-h: 68px;
   --font-display: 'Syne', sans-serif;
   --font-serif: 'Instrument Serif', serif;
