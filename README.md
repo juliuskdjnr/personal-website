@@ -1,4 +1,4 @@
-# Personal Website
+# Personal Portfolio Site
 
 This is a portfolio website built with plain HTML, CSS, and JavaScript. It showcases a personal branding homepage, project highlights, miscellaneous information, and a contact form with animated feedback.
 
