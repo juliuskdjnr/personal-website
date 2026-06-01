@@ -46,4 +46,4 @@ The project is intentionally lightweight and dependency-free, making it easy to 
 3. Select the `main` branch (or the default branch) and the root folder `/`.
 4. Save the settings and wait a few minutes.
 
-Your site will be available at `https://<juliuskdjnr>.github.io/<personal-website>/`.
+Your site will be available at `https://juliuskdjnr.github.io/personal-website/`.
