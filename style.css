@@ -3,14 +3,14 @@
 :root {
   /* Neutral beige palette with deep navy base */
   --white-linen: #faf9f6;
-  --navy-blazer: #1b2241;
+  --navy-blazer: #191e34;
   --rich-tan: #c6a47e;
   --powder-blue: #bcbde6;
-  --ash-grey: #94a3a7;
+  --ash-grey: #585b5b;
 
   --bg: var(--navy-blazer);
-  --surface: #202a4f;
-  --surface2: #28335f;
+  --surface: var(--navy-blazer);
+  --surface2: var(--rich-tan);
   --border: rgba(250,249,246,0.08);
   --border2: rgba(250,249,246,0.16);
   --text: var(--white-linen);
@@ -55,7 +55,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5rem;
-  background: rgba(11,11,15,0.85);
+  background: #9d8264;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 0.5px solid var(--border);
@@ -161,7 +161,7 @@ nav {
   position: fixed;
   top: var(--nav-h);
   left: 0; right: 0;
-  background: rgba(11,11,15,0.97);
+  background: rgba(15, 15, 22, 0.97);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 0.5px solid var(--border);
@@ -490,7 +490,7 @@ nav {
   color: var(--text);
   transition: color 0.2s;
 }
-.project-card:hover .project-name { color: var(--accent); }
+.project-card:hover .project-name { color: var(--ash-grey); }
 
 .project-desc {
   font-size: 0.88rem;
@@ -513,7 +513,7 @@ nav {
   padding: 0.3rem 0.6rem;
   background: rgba(200,245,90,0.06);
   border: 0.5px solid rgba(200,245,90,0.18);
-  color: var(--accent);
+  color: var(--ash-grey);
 }
 
 .project-links { display: flex; gap: 1rem; }
@@ -530,7 +530,7 @@ nav {
   align-items: center;
   gap: 0.3rem;
 }
-.project-link:hover { color: var(--accent); }
+.project-link:hover { color: var(--ash-grey); }
 .project-link svg { width: 12px; height: 12px; }
 
 /* ── MISC ── */
