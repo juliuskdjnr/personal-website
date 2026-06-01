@@ -681,6 +681,13 @@ nav {
   min-height: 1.2rem;
   font-family: var(--font-mono);
   letter-spacing: 0.04em;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.form-feedback.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ── FOOTER ── */

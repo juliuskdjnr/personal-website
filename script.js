@@ -83,14 +83,17 @@ function handleSubmit() {
   }
 
   feedback.style.color = 'var(--accent)';
-  feedback.textContent = "✓ Message sent! I'll get back to you soon.";
-
+  feedback.textContent = "✓ Message sent! I'll get back to you within 24 hours.";
+  feedback.classList.add('visible');
   document.getElementById('name').value = '';
   document.getElementById('email').value = '';
   document.getElementById('subject').value = '';
   document.getElementById('message').value = '';
 
-  setTimeout(() => { feedback.textContent = ''; }, 5000);
+  setTimeout(() => {
+    feedback.classList.remove('visible');
+    setTimeout(() => { feedback.textContent = ''; }, 350);
+  }, 5000);
 }
 
 // ── NAVBAR SCROLL SHADOW ──
