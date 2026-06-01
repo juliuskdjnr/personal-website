@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>J. Doe — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <a class="nav-logo" onclick="showPage('home')">J<span>.</span>Doe</a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a onclick="showPage('home')" class="active" data-page="home">Home</a></li>
+    <li><a onclick="showPage('projects')" data-page="projects">Projects</a></li>
+    <li><a onclick="showPage('misc')" data-page="misc">Misc</a></li>
+    <li><a onclick="showPage('contact')" data-page="contact">Contact</a></li>
+  </ul>
+
+  <button class="triangle-btn" id="triangleBtn" aria-label="Toggle menu" onclick="toggleMenu()">
+    <svg class="triangle-svg" viewBox="0 0 32 28">
+      <polygon class="tri-shape" points="16,2 30,26 2,26"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- ══ MOBILE MENU ══ -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="showPage('home');closeMenu()" data-page="home">Home</a>
+  <a onclick="showPage('projects');closeMenu()" data-page="projects">Projects</a>
+  <a onclick="showPage('misc');closeMenu()" data-page="misc">Misc</a>
+  <a onclick="showPage('contact');closeMenu()" data-page="contact">Contact</a>
+</div>
+
+<!-- ══════════════════════════════
+       PAGE: HOME
+══════════════════════════════ -->
+<section class="page active" id="page-home">
+  <div class="home-wrap">
+    <div>
+      <p class="home-eyebrow">Available for opportunities</p>
+      <h1 class="home-title">
+        Building at the<br/>
+        edge of <em>hardware</em><br/>
+        &amp; the web.
+      </h1>
+      <p class="home-desc">
+        Biomedical Engineering student at ACITY, Ghana. I design embedded systems, write firmware, and build web interfaces — bridging sensors to screens.
+      </p>
+      <div class="home-ctas">
+        <button class="btn-primary" onclick="showPage('projects')">View Projects</button>
+        <button class="btn-ghost" onclick="showPage('contact')">Get in Touch</button>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Years studying</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">ESP32</div>
+          <div class="stat-label">Favourite MCU</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-visual">
+      <div class="avatar-ring">
+        <div class="orbit-dot"></div>
+        <div class="avatar-inner">🛠️</div>
+      </div>
+      <div class="skills-chip-row">
+        <span class="chip">C/C++</span>
+        <span class="chip">HTML/CSS</span>
+        <span class="chip">Python</span>
+        <span class="chip">ESP32</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">J<span>.</span>Doe</div>
+          <p class="footer-tagline">Biomedical engineering student blending hardware intuition with modern web development.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('projects')">Projects</a></li>
+            <li><a onclick="showPage('misc')">Misc</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="mailto:j@example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2025 J. Doe — All rights reserved</span>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<!-- ══════════════════════════════
+       PAGE: PROJECTS
+══════════════════════════════ -->
+<section class="page" id="page-projects">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">What I've built</p>
+      <h2 class="section-title">Selected <em>Projects</em></h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-num">01 — Capstone</div>
+        <div class="project-name">AgriSense</div>
+        <p class="project-desc">Handheld multi-modal soil diagnostic device for smallholder farmers. Uses BIS and electrochemical sensing to measure pH, NPK, temperature, and soil moisture in the field.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">ESP32</span>
+          <span class="tech-tag">AD5933</span>
+          <span class="tech-tag">LoRa</span>
+          <span class="tech-tag">C/C++</span>
+          <span class="tech-tag">Atlas Scientific</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <a href="#" class="project-link">Demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="animation-delay:0.1s">
+        <div class="project-num">02 — Embedded Systems</div>
+        <div class="project-name">Smart Classroom Automation</div>
+        <p class="project-desc">ATmega328P-based classroom automation system using dual PIR sensors, a 3-channel relay for lighting/AC control, and an I2C LCD — migrated from breadboard to PCB for signal stability.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">ATmega328P</span>
+          <span class="tech-tag">HC-SR501</span>
+          <span class="tech-tag">I2C LCD</span>
+          <span class="tech-tag">Arduino</span>
+          <span class="tech-tag">PCB Design</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <a href="#" class="project-link">Report <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="animation-delay:0.2s">
+        <div class="project-num">03 — Bioinstrumentation</div>
+        <div class="project-name">Wearable SCD Monitor</div>
+        <p class="project-desc">ESP32-based wearable for sickle cell disease crisis detection. Fuses MAX30102 (SpO2/HR), TMP117 (temperature), and MPU-6050 (motion) with a Python ML classification pipeline.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">ESP32</span>
+          <span class="tech-tag">MAX30102</span>
+          <span class="tech-tag">TMP117</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">ML</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <a href="#" class="project-link">Slides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="animation-delay:0.3s">
+        <div class="project-num">04 — Project Management</div>
+        <div class="project-name">HBPRS — Hospital Biometric System</div>
+        <p class="project-desc">Hospital Biometric Patient Record System designed under LAPMAN LTD. Covers full project lifecycle — scope, risk matrix, EVM, communication plans, and stakeholder analysis.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">System Design</span>
+          <span class="tech-tag">Risk Management</span>
+          <span class="tech-tag">EVM</span>
+          <span class="tech-tag">Biometrics</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <a href="#" class="project-link">Deck <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="animation-delay:0.4s">
+        <div class="project-num">05 — Research</div>
+        <div class="project-name">3D Printing Awareness Study</div>
+        <p class="project-desc">Survey-based research paper (N=68) on biomedical 3D printing awareness among healthcare professionals in Ghana. Used TAM framework, chi-square tests, and statistical analysis.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Research</span>
+          <span class="tech-tag">Statistics</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">SciPy</span>
+          <span class="tech-tag">TAM</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">Paper <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <a href="#" class="project-link">Poster <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="animation-delay:0.5s">
+        <div class="project-num">06 — Embedded Systems</div>
+        <div class="project-name">Automated Drug Delivery System</div>
+        <p class="project-desc">ESP32-controlled syringe pump for automated drug delivery. Integrates MAX30102, DS18B20, MPU6050, and a stepper motor with closed-loop dosing logic.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">ESP32</span>
+          <span class="tech-tag">Stepper Motor</span>
+          <span class="tech-tag">DS18B20</span>
+          <span class="tech-tag">C/C++</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+          <a href="#" class="project-link">Spec Doc <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">J<span>.</span>Doe</div>
+          <p class="footer-tagline">Biomedical engineering student blending hardware intuition with modern web development.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('projects')">Projects</a></li>
+            <li><a onclick="showPage('misc')">Misc</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="mailto:j@example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2025 J. Doe — All rights reserved</span>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<!-- ══════════════════════════════
+       PAGE: MISC
+══════════════════════════════ -->
+<section class="page" id="page-misc">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Beyond the code</p>
+      <h2 class="section-title">Miscellaneous <em>Things</em></h2>
+    </div>
+
+    <div class="misc-grid">
+      <div class="misc-card reveal">
+        <span class="misc-icon">🧵</span>
+        <div class="misc-card-title">Luxury Accessories Brand Concept</div>
+        <p class="misc-card-text">Exploring a brand concept that blends premium leather goods with Northern Kente (Gonja cloth) from Ghana's Northern Region — targeting a high-end executive clientele.</p>
+      </div>
+      <div class="misc-card reveal" style="animation-delay:0.08s">
+        <span class="misc-icon">📡</span>
+        <div class="misc-card-title">Wireless Sensor Networks</div>
+        <p class="misc-card-text">Interested in LoRa/LoRaWAN mesh topologies for rural data collection in sub-Saharan Africa, especially for agriculture and environmental monitoring at low cost.</p>
+      </div>
+      <div class="misc-card reveal" style="animation-delay:0.16s">
+        <span class="misc-icon">📖</span>
+        <div class="misc-card-title">Reading & Research</div>
+        <p class="misc-card-text">Regularly reading papers in biosensor design, bioimpedance spectroscopy, and precision agriculture. Also following the intersection of hardware with AI edge inference.</p>
+      </div>
+      <div class="misc-card reveal" style="animation-delay:0.24s">
+        <span class="misc-icon">🌍</span>
+        <div class="misc-card-title">Ghanaian Engineering Context</div>
+        <p class="misc-card-text">Grounded in solving problems specific to the Ghanaian and West African context — where resource constraints and local knowledge intersect in interesting engineering challenges.</p>
+      </div>
+      <div class="misc-card reveal" style="animation-delay:0.32s">
+        <span class="misc-icon">⚡</span>
+        <div class="misc-card-title">Electronics Prototyping</div>
+        <p class="misc-card-text">Enjoy the breadboard-to-PCB journey — schematic capture, layout, DRC, and the moment a board comes back from fab and powers on cleanly on the first try.</p>
+      </div>
+      <div class="misc-card reveal" style="animation-delay:0.4s">
+        <span class="misc-icon">🚀</span>
+        <div class="misc-card-title">Entrepreneurship</div>
+        <p class="misc-card-text">Interested in turning engineering work into real products — from identifying a user problem to building an MVP, validating it, and thinking about go-to-market in the African context.</p>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Tools & Technologies</p>
+        <h3 class="section-title" style="font-size:1.8rem;">My <em>Toolkit</em></h3>
+      </div>
+
+      <div class="skills-group reveal">
+        <div class="skills-group-label">Firmware & Embedded</div>
+        <div class="skills-list">
+          <span class="skill-pill">C / C++</span>
+          <span class="skill-pill">Arduino</span>
+          <span class="skill-pill">ESP32</span>
+          <span class="skill-pill">ATmega328P</span>
+          <span class="skill-pill">I2C / SPI / UART</span>
+          <span class="skill-pill">LoRa / LoRaWAN</span>
+          <span class="skill-pill">FreeRTOS</span>
+        </div>
+      </div>
+      <div class="skills-group reveal">
+        <div class="skills-group-label">Signal Processing & Sensing</div>
+        <div class="skills-list">
+          <span class="skill-pill">DSP (MATLAB)</span>
+          <span class="skill-pill">Bioimpedance Spectroscopy</span>
+          <span class="skill-pill">Electrochemical Sensing</span>
+          <span class="skill-pill">PPG / SpO2</span>
+          <span class="skill-pill">AD5933</span>
+          <span class="skill-pill">Laplace Transforms</span>
+        </div>
+      </div>
+      <div class="skills-group reveal">
+        <div class="skills-group-label">Software & Web</div>
+        <div class="skills-list">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">HTML / CSS / JS</span>
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">SciPy / Pandas</span>
+          <span class="skill-pill">Git / GitHub</span>
+        </div>
+      </div>
+      <div class="skills-group reveal">
+        <div class="skills-group-label">Engineering & Design</div>
+        <div class="skills-list">
+          <span class="skill-pill">PCB Design</span>
+          <span class="skill-pill">Control Systems</span>
+          <span class="skill-pill">Biomaterials</span>
+          <span class="skill-pill">Research Methodology</span>
+          <span class="skill-pill">Project Management (EVM / CPM)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">J<span>.</span>Doe</div>
+          <p class="footer-tagline">Biomedical engineering student blending hardware intuition with modern web development.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('projects')">Projects</a></li>
+            <li><a onclick="showPage('misc')">Misc</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="mailto:j@example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2025 J. Doe — All rights reserved</span>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<!-- ══════════════════════════════
+       PAGE: CONTACT
+══════════════════════════════ -->
+<section class="page" id="page-contact">
+  <div class="section-wrap">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Let's talk</p>
+      <h2 class="section-title">Get in <em>Touch</em></h2>
+    </div>
+
+    <div class="contact-layout">
+      <div class="reveal">
+        <p class="contact-intro">
+          Open to collaboration on embedded systems projects, web development work, or research partnerships. Whether you're building something at the intersection of hardware and software — let's connect.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:j@example.com" class="contact-link-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            j@example.com
+          </a>
+          <a href="#" class="contact-link-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            github.com/jdoe
+          </a>
+          <a href="#" class="contact-link-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            linkedin.com/in/jdoe
+          </a>
+          <a href="#" class="contact-link-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Accra, Ghana
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal contact-form-wrap" style="animation-delay:0.1s">
+        <div class="form-group">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-input" type="text" id="name" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="subject">Subject</label>
+          <input class="form-input" type="text" id="subject" placeholder="What's this about?" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-textarea" id="message" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button class="btn-primary form-submit" onclick="handleSubmit()">Send Message</button>
+        <div class="form-feedback" id="formFeedback"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">J<span>.</span>Doe</div>
+          <p class="footer-tagline">Biomedical engineering student blending hardware intuition with modern web development.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('projects')">Projects</a></li>
+            <li><a onclick="showPage('misc')">Misc</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-links">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="mailto:j@example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2025 J. Doe — All rights reserved</span>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
