@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>J. Doe — Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julius Junior Zanuviel Kog-Der — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <!-- ══ NAVBAR ══ -->
 <nav id="navbar">
-  <a class="nav-logo" onclick="showPage('home')">J<span>.</span>Doe</a>
+  <a class="nav-logo" onclick="showPage('home')">Julius Junior Zanuviel Kog-Der</a> 
+  <!-- This makes it such that when the name is clicked anywhere in the document, the user is taken to the home page. -->
 
   <ul class="nav-links" id="navLinks">
     <li><a onclick="showPage('home')" class="active" data-page="home">Home</a></li>
@@ -25,6 +26,7 @@
       <polygon class="tri-shape" points="16,2 30,26 2,26"/>
     </svg>
   </button>
+  <!-- The triangle menu button is created. This button toggles the mobile menu on smaller screens. -->
 </nav>
 
 <!-- ══ MOBILE MENU ══ -->
@@ -41,18 +43,18 @@
 <section class="page active" id="page-home">
   <div class="home-wrap">
     <div>
-      <p class="home-eyebrow">Available for opportunities</p>
+      <p class="home-eyebrow">Welcome to my world</p>
       <h1 class="home-title">
         Building at the<br/>
         edge of <em>hardware</em><br/>
         &amp; the web.
       </h1>
       <p class="home-desc">
-        Biomedical Engineering student at ACITY, Ghana. I design embedded systems, write firmware, and build web interfaces — bridging sensors to screens.
+        Computer Engineering student at ACity, Ghana. I design embedded systems, write firmware, and build web interfaces. I focus on bridging the gap between low-level hardware and user-friendly software.
       </p>
       <div class="home-ctas">
-        <button class="btn-primary" onclick="showPage('projects')">View Projects</button>
-        <button class="btn-ghost" onclick="showPage('contact')">Get in Touch</button>
+        <button class="btn-primary" onclick="showPage('projects')">Click to View Projects</button>
+        <button class="btn-ghost" onclick="showPage('contact')">Let's Get in Touch</button>
       </div>
       <div class="stats-row">
         <div class="stat-item">
@@ -64,8 +66,8 @@
           <div class="stat-label">Years studying</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">ESP32</div>
-          <div class="stat-label">Favourite MCU</div>
+          <div class="stat-num">ATMega328P</div>
+          <div class="stat-label">Most used MCU</div>
         </div>
       </div>
     </div>
@@ -88,8 +90,8 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div>
-          <div class="footer-brand">J<span>.</span>Doe</div>
-          <p class="footer-tagline">Biomedical engineering student blending hardware intuition with modern web development.</p>
+          <div class="footer-brand">Julius Junior Zanuviel Kog-Der</div>
+          <p class="footer-tagline">Computer Engineering student at ACity, Ghana. I design embedded systems, write firmware, and build web interfaces. I focus on bridging the gap between low-level hardware and user-friendly software.</p>
         </div>
         <div>
           <div class="footer-col-title">Navigate</div>
@@ -105,13 +107,12 @@
           <ul class="footer-links">
             <li><a href="#">GitHub</a></li>
             <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Twitter / X</a></li>
             <li><a href="mailto:j@example.com">Email</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span class="footer-copy">© 2025 J. Doe — All rights reserved</span>
+        <span class="footer-copy">© 2026 Julius Junior Zanuviel Kog-Der — All rights reserved</span>
         <div class="footer-socials">
           <a href="#" class="footer-social-link" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
